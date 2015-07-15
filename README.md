@@ -83,7 +83,7 @@ public Response vsiitUploadForm(@Context HttpServletRequest request)
       }
       else if(item.isFormField() && "header2".equals(fieldName))
       {
-          header2 = WebUtil.stringToLong(Streams.asString(stream));
+          header2 = Streams.asString(stream);
       }
       else if(item.isFormField() && "filename".equals(fieldName))
       {

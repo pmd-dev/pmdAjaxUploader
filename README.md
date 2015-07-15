@@ -79,11 +79,11 @@ public Response vsiitUploadForm(@Context HttpServletRequest request)
       
       if(item.isFormField() && "header1".equals(fieldName))
       {
-          securityToken = Streams.asString(stream);
+          header1 = Streams.asString(stream);
       }
       else if(item.isFormField() && "header2".equals(fieldName))
       {
-          profileId = WebUtil.stringToLong(Streams.asString(stream));
+          header2 = WebUtil.stringToLong(Streams.asString(stream));
       }
       else if(item.isFormField() && "filename".equals(fieldName))
       {

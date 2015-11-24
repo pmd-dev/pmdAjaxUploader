@@ -9,7 +9,7 @@ pmdAjaxUploader utilitizes HTML5 File APIs, when supported, and falls back to po
 jQuery("#drop_zone").pmdAjaxUploader({
   streamingUploadUrl: 'yourApi/streamingFileUploadEndpoint',
   formUploadUrl: 'yourApi/formBasedFileUploadEndpoint',
-  headers: {header1: value1, header2: value2},  // headers (form parameters in case of form upload) to send to server
+  headers: function() { },  // needs to return any optional headers in an associative array
   fileAddedHandler: function(uploadId, filename, isProgressAvailable) { // called when upload started },
   progressHandler: function(uploadId, filename, percentComplete) {  } ,
   completeHandler: function(uploadId, filename, attachmentId) { // called when upload complete with id supplied by server },
